@@ -16,6 +16,15 @@ export const client = new MongoClient(uri, {
   }
 });
 
+
+
+// all collection here..
+export const userCollection = client.db('foodDB').collection('users')
+export const menuCollection = client.db('foodDB').collection('menus')
+export const menuCartsCollection = client.db('foodDB').collection('menuCarts')
+export const restaurentCollection = client.db('foodDB').collection('restaurents')
+
+
 export const connectDB = async () => {
     try {
         // Connect the client to the server	(optional starting in v4.7)
@@ -24,7 +33,7 @@ export const connectDB = async () => {
 
         // Send a ping to confirm a successful connection
         // await client.db("admin").command({ ping: 1 });
-        // console.log("Successfully Connected to MongoDB!");
+        console.log("Successfully Connected to MongoDB!");
     } catch (error) {
         console.error("Failed to Connect to MongoDB", error);
     } finally {
