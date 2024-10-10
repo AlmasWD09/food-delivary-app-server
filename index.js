@@ -6,6 +6,8 @@ import {connectDB} from "./db.js"
 import jwtRoutes from "./routes/jwt.js";
 import restaurentRoute from "./routes/restaurent.js";
 import menuRoute from "./routes/menu.js";
+import deliveryRoute from "./routes/deliveryBoy.js"
+
 dotenv.config();
 
 
@@ -23,6 +25,9 @@ app.use('/single-menu',menuRoute)
 app.use('/cart-menu',menuRoute)
 app.use('/cart-menu-delete',menuRoute)
 app.use('/menus',menuRoute)
+app.use('/delivery-man',deliveryRoute)
+
+
 
 
 app.get("/",(req, res)=>{
