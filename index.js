@@ -6,6 +6,9 @@ import {connectDB} from "./db.js"
 import jwtRoutes from "./routes/jwt.js";
 import restaurentRoute from "./routes/restaurent.js";
 import menuRoute from "./routes/menu.js";
+import totalCountRoute from "./routes/totalCount.js";
+import deliveryRoute from "./routes/deliveryBoy.js"
+
 dotenv.config();
 
 
@@ -23,7 +26,12 @@ app.use('/single-menu',menuRoute)
 app.use('/cart-menu',menuRoute)
 app.use('/cart-menu-delete',menuRoute)
 app.use('/menus',menuRoute)
+app.use('/delivery-man',deliveryRoute)
 
+
+
+// total information for (dashboard)
+app.use('/', totalCountRoute);
 
 app.get("/",(req, res)=>{
     res.send('Food delivery server running')
