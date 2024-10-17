@@ -7,6 +7,7 @@ import jwtRoutes from "./routes/jwt.js";
 import restaurentRoute from "./routes/restaurent.js";
 import menuRoute from "./routes/menu.js";
 import deliveryRoute from "./routes/deliveryBoy.js"
+import paymentRoute from "./routes/payment.js"
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ app.use('/cart-menu',menuRoute)
 app.use('/cart-menu-delete',menuRoute)
 app.use('/menus',menuRoute)
 app.use('/delivery-man',deliveryRoute)
+app.use('/payment',paymentRoute)
 
 
 

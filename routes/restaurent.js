@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     if (search) {
         query.restaurantName = {
             $regex: search,
-            $options: "i",
+            $options: "i"
         };
     }
     const cursor = restaurentCollection.find(query);
@@ -49,7 +49,6 @@ router.get('/restReviews', async(req,  res)=>{
     const name = req.params.title || "Spice Paradise"
     const filter = {restaurantName : name}
     const result = await restaurentReviewsCollection.find(filter).toArray()
-   console.log(result)
     res.send(result)
 }) 
 
