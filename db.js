@@ -26,6 +26,7 @@ export const restaurentCollection = client.db('foodDB').collection('restaurents'
 export const restaurentReviewsCollection = client.db('foodDB').collection('restaurentReviews')
 export const restaurentFavoriteCollection = client.db('foodDB').collection('restaurentFavorite')
 export const deliveryManCollection = client.db('foodDB').collection('deliveryHero')
+export const paymentsCollection = client.db('foodDB').collection('payments')
 
 
 export const connectDB = async () => {

@@ -9,6 +9,10 @@ import menuRoute from "./routes/menu.js";
 import totalCountRoute from "./routes/totalCount.js";
 import deliveryRoute from "./routes/deliveryBoy.js";
 import userProfileRoute from "./routes/userProfile.js";
+import paymentRoute from "./routes/payment.js"
+import reviewRoute from "./routes/review.js";
+import favoriteRoute from "./routes/favorite.js";
+import totalCountRoute from "./routes/totalCount.js";
 
 dotenv.config();
 
@@ -29,6 +33,9 @@ app.use('/cart-menu-delete',menuRoute)
 app.use('/menus',menuRoute)
 app.use('/delivery-man',deliveryRoute)
 app.use('/user-profile',userProfileRoute)
+app.use('/payment',paymentRoute)
+app.use('/reviews',reviewRoute)
+app.use('/favorite',favoriteRoute)
 
 
 
