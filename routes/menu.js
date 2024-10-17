@@ -27,11 +27,6 @@ router.get('/', async(req,  res)=>{
     const result = await menuCollection.find().toArray()
     res.send(result)
 })
-router.get('/:title', async(req,  res)=>{
-    const title = req.params.name
-    console.log(title)
-    const result = await menuCollection.find().toArray()
-    res.send(result)
-})
+
 
 export default router;
