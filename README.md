@@ -7,6 +7,7 @@ dotenv to handle .env file
 
 
 #npm i bcryptjs
+#npm i express-socket.io
 
 
 
