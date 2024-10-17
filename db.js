@@ -23,6 +23,10 @@ export const userCollection = client.db('foodDB').collection('users')
 export const menuCollection = client.db('foodDB').collection('menus')
 export const menuCartsCollection = client.db('foodDB').collection('menuCarts')
 export const restaurentCollection = client.db('foodDB').collection('restaurents')
+export const restaurentReviewsCollection = client.db('foodDB').collection('restaurentReviews')
+export const restaurentFavoriteCollection = client.db('foodDB').collection('restaurentFavorite')
+export const deliveryManCollection = client.db('foodDB').collection('deliveryHero')
+export const paymentsCollection = client.db('foodDB').collection('payments')
 
 
 export const connectDB = async () => {
