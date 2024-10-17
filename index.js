@@ -12,7 +12,6 @@ import userProfileRoute from "./routes/userProfile.js";
 import paymentRoute from "./routes/payment.js"
 import reviewRoute from "./routes/review.js";
 import favoriteRoute from "./routes/favorite.js";
-import totalCountRoute from "./routes/totalCount.js";
 
 dotenv.config();
 
