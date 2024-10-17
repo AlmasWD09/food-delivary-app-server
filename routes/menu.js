@@ -18,7 +18,7 @@ router.get('/:email', async(req,  res)=>{
 })
 router.delete('/:id', async(req,  res)=>{
     const id = req.params.id
-    const objectId = ObjectId(id);
+    const objectId = new ObjectId(id);
     const query = { _id : objectId }
     const result = await menuCartsCollection.deleteOne(query)
     res.send(result)

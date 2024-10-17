@@ -6,7 +6,8 @@ import {connectDB} from "./db.js"
 import jwtRoutes from "./routes/jwt.js";
 import restaurentRoute from "./routes/restaurent.js";
 import menuRoute from "./routes/menu.js";
-import deliveryRoute from "./routes/deliveryBoy.js";
+import deliveryRoute from "./routes/deliveryBoy.js"
+import paymentRoute from "./routes/payment.js"
 import reviewRoute from "./routes/review.js";
 import favoriteRoute from "./routes/favorite.js";
 import totalCountRoute from "./routes/totalCount.js";
@@ -29,6 +30,7 @@ app.use('/cart-menu',menuRoute)
 app.use('/cart-menu-delete',menuRoute)
 app.use('/menus',menuRoute)
 app.use('/delivery-man',deliveryRoute)
+app.use('/payment',paymentRoute)
 app.use('/reviews',reviewRoute)
 app.use('/favorite',favoriteRoute)
 

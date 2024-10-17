@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     if (search) {
         query.restaurantName = {
             $regex: search,
-            $options: "i",
+            $options: "i"
         };
     }
     const cursor = restaurentCollection.find(query);
