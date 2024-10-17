@@ -15,14 +15,16 @@ router.get("/denish", async (req, res) => {
 
     // Send the total count as a response
     res.send({
-         totalUsers: totalUserCount,
-         totalResturant: totalResturentCount,
-         totalRiders : totalDeliveryManCount,
-         });
+      totalUsers: totalUserCount,
+      totalResturant: totalResturentCount,
+      totalRiders: totalDeliveryManCount,
+    });
   } catch (error) {
     // Handle any errors that occur during the request
     console.error("Failed to get total user count:", error);
-    res.status(500).json({ message: "Server error, failed to get total user count" });
+    res
+      .status(500)
+      .json({ message: "Server error, failed to get total user count" });
   }
 });
 
