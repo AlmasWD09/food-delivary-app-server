@@ -37,7 +37,6 @@ app.use('/reviews',reviewRoute)
 app.use('/favorite',favoriteRoute)
 
 
-
 // total information for (dashboard)
 app.use('/', totalCountRoute);
 
