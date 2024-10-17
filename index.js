@@ -9,6 +9,7 @@ import menuRoute from "./routes/menu.js";
 import deliveryRoute from "./routes/deliveryBoy.js";
 import reviewRoute from "./routes/review.js";
 import favoriteRoute from "./routes/favorite.js";
+import totalCountRoute from "./routes/totalCount.js";
 
 dotenv.config();
 
@@ -33,6 +34,8 @@ app.use('/favorite',favoriteRoute)
 
 
 
+// total information for (dashboard)
+app.use('/', totalCountRoute);
 
 app.get("/",(req, res)=>{
     res.send('Food delivery server running')
