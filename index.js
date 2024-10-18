@@ -24,6 +24,7 @@ app.use(cors({ origin: corsOptions }));
 app.use(express.json());
 
 // Routes
+
 app.use("/jwt", jwtRoutes);
 app.use("/restaurents", restaurentRoute);
 app.use("/single-menu", menuRoute);
@@ -37,8 +38,7 @@ app.use("/reviews", reviewRoute);
 app.use("/favorite", favoriteRoute);
 app.use("/users", totalUsers);
 
-// total information for (dashboard)
-// total information for (dashboard)
+
 app.use("/", totalCountRoute);
 
 app.get("/", (req, res) => {

@@ -13,6 +13,7 @@ router.get("/rest", async (req, res) => {
   res.send(result);
 });
 
+
 router.get("/", async (req, res) => {
   const search = req.query.search;
   let query = {};
@@ -79,3 +80,4 @@ router.post("/restFavorite", async (req, res) => {
   res.send(result);
 });
 export default router;
+
