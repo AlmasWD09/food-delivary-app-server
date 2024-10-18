@@ -38,6 +38,7 @@ app.use("/favorite", favoriteRoute);
 app.use("/users", totalUsers);
 
 // total information for (dashboard)
+// total information for (dashboard)
 app.use("/", totalCountRoute);
 
 app.get("/", (req, res) => {
