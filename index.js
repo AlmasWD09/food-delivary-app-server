@@ -9,7 +9,7 @@ import menuRoute from "./routes/menu.js";
 import totalCountRoute from "./routes/totalCount.js";
 import deliveryRoute from "./routes/deliveryBoy.js";
 import userProfileRoute from "./routes/userProfile.js";
-import paymentRoute from "./routes/payment.js"
+import paymentRoute from "./routes/payment.js";
 import reviewRoute from "./routes/review.js";
 import favoriteRoute from "./routes/favorite.js";
 import totalUsers from "./routes/totalUsers.js";
@@ -25,22 +25,20 @@ app.use(express.json());
 
 // Routes
 
-app.use('/jwt',jwtRoutes)
-app.use('/restaurents',restaurentRoute)
-app.use('/single-menu',menuRoute)
-app.use('/cart-menu',menuRoute)
-app.use('/cart-menu-delete',menuRoute)
-app.use('/menus',menuRoute)
-app.use('/delivery-man',deliveryRoute)
-app.use('/user-profile',userProfileRoute)
-app.use('/payment',paymentRoute)
-app.use('/reviews',reviewRoute)
-app.use('/favorite',favoriteRoute)
-
+app.use("/jwt", jwtRoutes);
+app.use("/restaurents", restaurentRoute);
+app.use("/single-menu", menuRoute);
+app.use("/cart-menu", menuRoute);
+app.use("/cart-menu-delete", menuRoute);
+app.use("/menus", menuRoute);
+app.use("/delivery-man", deliveryRoute);
+app.use("/user-profile", userProfileRoute);
+app.use("/payment", paymentRoute);
+app.use("/reviews", reviewRoute);
+app.use("/favorite", favoriteRoute);
 app.use("/users", totalUsers);
 
 
-// total information for (dashboard)
 app.use("/", totalCountRoute);
 
 app.get("/", (req, res) => {
