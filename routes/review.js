@@ -29,7 +29,6 @@ router.get('/menuRev', async (req, res) => {
 })
 router.post('/menuRev', async (req, res) => {
     const review = req.body
-    console.log(review)
     const result = await menuReviewsCollection.insertOne(review)
     res.send(result)
 })
