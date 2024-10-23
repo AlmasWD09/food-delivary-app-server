@@ -5,6 +5,19 @@ import { ObjectId } from "mongodb";
 const router = express.Router();
 
 
+router.get('/bannerSearch', async(req,res) => {
+    const search = req.query.search;
+    let query = {};
+    if (search) {
+        query.location = {
+            $regex: search,
+            $options: "i"
+        };
+    }
+    const result = await restaurentCollection.find(query).toArray()
+    res.send(result)
+})
+
 router.get('/', async (req, res) => {
     const search = req.query.search;
     let query = {};
