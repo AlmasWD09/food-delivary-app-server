@@ -16,6 +16,20 @@ router.get('/:email', async(req,  res)=>{
     const result = await menuCartsCollection.find(filter).toArray()
     res.send(result)
 })
+
+router.patch("/quantity", async(req,res)=>{
+    
+    const query = {title : req.body?.title}
+    const update = {
+        $set : {
+            quantity : req.body.quantity
+        }
+    }
+   const result = await menuCartsCollection.updateOne(query,update)
+   console.log(result);
+   res.send(result)
+})
+
 router.delete('/:id', async(req,  res)=>{
     const id = req.params.id
     const objectId = new ObjectId(id);
