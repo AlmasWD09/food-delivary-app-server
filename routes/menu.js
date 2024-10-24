@@ -18,7 +18,7 @@ router.get('/:email', async(req,  res)=>{
 })
 router.delete('/:id', async(req,  res)=>{
     const id = req.params.id
-    const objectId = ObjectId(id);
+    const objectId = new ObjectId(id);
     const query = { _id : objectId }
     const result = await menuCartsCollection.deleteOne(query)
     res.send(result)
@@ -27,11 +27,6 @@ router.get('/', async(req,  res)=>{
     const result = await menuCollection.find().toArray()
     res.send(result)
 })
-router.get('/:title', async(req,  res)=>{
-    const title = req.params.name
-    console.log(title)
-    const result = await menuCollection.find().toArray()
-    res.send(result)
-})
+
 
 export default router;
