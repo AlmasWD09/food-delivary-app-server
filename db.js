@@ -21,6 +21,7 @@ export const client = new MongoClient(uri, {
 // all collection here..
 export const userCollection = client.db('foodDB').collection('users')
 export const menuCollection = client.db('foodDB').collection('menus')
+export const menuReviewsCollection = client.db('foodDB').collection('menuReviews')
 export const menuCartsCollection = client.db('foodDB').collection('menuCarts')
 export const restaurentCollection = client.db('foodDB').collection('restaurents')
 export const restaurentReviewsCollection = client.db('foodDB').collection('restaurentReviews')
