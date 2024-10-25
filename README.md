@@ -10,7 +10,3 @@ dotenv to handle .env file
 #npm i express-socket.io
 
 
-
-### @everyone add to .env file
-DB_USER=foodDelivary
-DB_PASS=7fW1EkaDPsdLcRYl
