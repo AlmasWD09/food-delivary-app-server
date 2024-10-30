@@ -40,6 +40,7 @@ app.use("/favorite", favoriteRoute);
 app.use("/users", totalUsers);
 app.use("/weatherMenus", weatherRoute);
 
+
 app.use("/", totalCountRoute);
 
 app.get("/", (req, res) => {
