@@ -13,6 +13,7 @@ import paymentRoute from "./routes/payment.js";
 import reviewRoute from "./routes/review.js";
 import favoriteRoute from "./routes/favorite.js";
 import totalUsers from "./routes/totalUsers.js";
+import weatherRoute from "./routes/weather.js";
 
 dotenv.config();
 
@@ -37,7 +38,7 @@ app.use("/payment", paymentRoute);
 app.use("/reviews", reviewRoute);
 app.use("/favorite", favoriteRoute);
 app.use("/users", totalUsers);
-
+app.use("/weatherMenus", weatherRoute);
 
 app.use("/", totalCountRoute);
 

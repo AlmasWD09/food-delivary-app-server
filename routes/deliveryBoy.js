@@ -1,7 +1,6 @@
 import express from "express";
 import { deliveryManCollection } from "../db.js";
 
-
 const router = express.Router()
 
 router.get('/', async(req,res) => {
