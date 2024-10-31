@@ -14,6 +14,7 @@ import reviewRoute from "./routes/review.js";
 import favoriteRoute from "./routes/favorite.js";
 import totalUsers from "./routes/totalUsers.js";
 import weatherRoute from "./routes/weather.js";
+import userRoleRoute from "./routes/userRole.js";
 
 dotenv.config();
 
@@ -39,6 +40,8 @@ app.use("/reviews", reviewRoute);
 app.use("/favorite", favoriteRoute);
 app.use("/users", totalUsers);
 app.use("/weatherMenus", weatherRoute);
+app.use("/user-role", userRoleRoute);
+
 
 app.use("/", totalCountRoute);
 
