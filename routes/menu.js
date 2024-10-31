@@ -48,5 +48,13 @@ router.post('/add-menu',async(req,res) => {
     res.send(result)
 })
 
+router.delete('/delete-menu/:id',async(req,res) => {
+ const id = req.params.id
+ const objectId = new ObjectId(id)
+ const query = { _id : objectId}
+ const result = await menuCollection.deleteOne(query)
+ res.send(result)
+})
+
 
 export default router;
