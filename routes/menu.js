@@ -42,5 +42,11 @@ router.get('/', async(req,  res)=>{
     res.send(result)
 })
 
+router.post('/add-menu',async(req,res) => {
+    const menu = req.body
+    const result = await menuCollection.insertOne(menu)
+    res.send(result)
+})
+
 
 export default router;
