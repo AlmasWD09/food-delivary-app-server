@@ -11,11 +11,16 @@ router.get("/", async (req, res) => {
   res.send(results);
 });
 
+router.get("/restaurant-owner", async (req, res) => {
+  const filter = { role: "restaurant" };
+  const results = await userCollection.find(filter).toArray();
+  res.send(results);
+});
+
 router.patch("/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const body = req.body;
-    console.log(body);
     const query = { _id: new ObjectId(id) };
     const updateDoc = {
       $set: {
@@ -33,5 +38,12 @@ router.patch("/:id", async (req, res) => {
     res.status(404).send("something went wrong");
   }
 });
+
+router.delete('/:id', async (req, res) => {
+  const id = req.params.id;
+  const query = { _id: new ObjectId(id) };
+  const result = await userCollection.deleteOne(query);
+  res.send(result);
+})
 
 export default router;

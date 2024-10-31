@@ -7,6 +7,17 @@ import { ObjectId } from "mongodb";
 const router = express.Router();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
+router.get("/", async (req, res)=> {
+  const result = await paymentsCollection.find().toArray();
+  res.send(result);
+})
+
+router.get("/respayment", async (req, res) => {
+  const filter = { "paymentData.restaurantNames": { $in: ["Spice Paradise"] } };
+  const results = await paymentsCollection.find(filter).toArray();
+  res.send(results);
+});
+
 router.post("/intent",async(req,res)=>{
     const {price} = req.body;
    
