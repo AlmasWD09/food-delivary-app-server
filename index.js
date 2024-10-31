@@ -42,7 +42,6 @@ app.use("/users", totalUsers);
 app.use("/weatherMenus", weatherRoute);
 app.use("/user-role", userRoleRoute);
 
-
 app.use("/", totalCountRoute);
 
 app.get("/", (req, res) => {

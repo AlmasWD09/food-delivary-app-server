@@ -19,7 +19,7 @@ router.get('/:email', async(req,  res)=>{
 
 router.patch("/quantity", async(req,res)=>{
     
-    const query = {title : req.body?.title}
+   const query = {title : req.body?.title}
     const update = {
         $set : {
             quantity : req.body.quantity
