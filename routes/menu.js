@@ -19,7 +19,7 @@ router.get('/:email', async(req,  res)=>{
 
 router.patch("/quantity", async(req,res)=>{
     
-    const query = {title : req.body?.title}
+   const query = {title : req.body?.title}
     const update = {
         $set : {
             quantity : req.body.quantity
@@ -40,6 +40,20 @@ router.delete('/:id', async(req,  res)=>{
 router.get('/', async(req,  res)=>{
     const result = await menuCollection.find().toArray()
     res.send(result)
+})
+
+router.post('/add-menu',async(req,res) => {
+    const menu = req.body
+    const result = await menuCollection.insertOne(menu)
+    res.send(result)
+})
+
+router.delete('/delete-menu/:id',async(req,res) => {
+ const id = req.params.id
+ const objectId = new ObjectId(id)
+ const query = { _id : objectId}
+ const result = await menuCollection.deleteOne(query)
+ res.send(result)
 })
 
 
