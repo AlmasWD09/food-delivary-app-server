@@ -4,11 +4,14 @@ import { restaurentFavoriteCollection } from "../db.js";
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-    const { userName, restaurantName } = req.query;
+    const { userName, restaurantName } = req.body;
+    console.log(userName, restaurantName)
 
     const filter = {};
-    if (userName) filter.userName = userName;  // Ensure correct field in the MongoDB filter
-    if (restaurantName) filter.restaurantName = restaurantName;
+    if (userName) {filter.userName = userName; 
+        if (restaurantName) filter.restaurantName = restaurantName;
+    } 
+    
 
     const result = await restaurentFavoriteCollection.find(filter).toArray();
     res.send(result);
